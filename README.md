@@ -58,6 +58,20 @@ Dans le cadre d'une nouvelle étude, un groupe de chercheurs de votre hôpital s
 
 En suivant ces critères, créer une liste composée des `participant_id` de l'ensemble des candidats possibles.
 
+## Partie 5: Statistiques
+
+L'hôpital souhaiterait obtenir les statistiques par sexe de votre base de données. Pour cela, calculez la moyenne et l'écart type de `l'âge`, de `la taille` et de `la masse` pour chacun des deux groupes. Les statistiques devront être rangées au sein d'un nouveau dictionnaire appelé `metrics` composé de 3 niveaux.
+
+Par exemple:
+- la moyenne de la taille dans le groupe masculin sera obtenue de la manière suivante:
+```python
+print(metrics['M']['height']['mean'])
+```
+- l'écart type de l'âge dans le groupe feminin sera obtenue de la manière suivante:
+```python
+print(metrics['F']['age']['std'])
+```
+
 ## Références
 
 Les données utilisées dans les fichiers csv de ce TP sont extraites de la base de données [data-multi-subject](https://github.com/spine-generic/data-multi-subject).  
