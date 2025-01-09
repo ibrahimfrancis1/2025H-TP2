@@ -38,6 +38,10 @@ Dans cette section, vous devrez charger les données contenues dans le fichier `
 
 ## Partie 2: Fusion des données
 
+Vous vous apercevez qu'un collègue à vous dispose également d'une liste de patients et vous souhaiteriez regrouper tous ces dernier au sein d'un unique dictionnaire python appelé `patients` comme précédemment. Dans cette partie, vous devrez regrouper l'ensemble des patients provenant des fichiers `subjects.csv` et `extra_subjects.csv` tout en **ÉVITANT LES DUPLICATIONS** en suivant la même construction que dans la partie 1.
 
+## Références
+
+Les données utilisées dans les fichiers csv de ce TP sont extraites de la base de données [data-multi-subject](https://github.com/spine-generic/data-multi-subject).  
 
  
