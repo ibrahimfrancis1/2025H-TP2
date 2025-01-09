@@ -14,7 +14,7 @@ L'objectif de ce travail pratique est d'apprendre à manipuler une base de donn�
 - Les différentes structures de données, comme les listes, les dictionnaires, et les tuples.
 - Le module python `csv` permettant d'ouvrir et d'enregister des fichiers csv.
 
-Ces notions seront explorées à travers différentes parties présentant chacunes différentes utilisations pratiques.
+Ces notions seront explorées à travers différentes parties présentant chacunes différentes utilisations pratiques de ces outils.
 
 ## Introduction
 
@@ -30,6 +30,14 @@ Vous avez récemment été engagé par un hôpital pour gérer plusieurs bases d
   - DCM: Degenerative Cervical Myelopathy (myelopathie cervicale degenerative)
   - MildCompression: Mild Spinal Cord Copression (compression moyenne de la moelle épinière)
 
-## Instructions
+## Partie 1: Initialisation des données
 
-### Partie 1
+Dans cette section, vous devrez charger les données contenues dans le fichier `subjects.csv` à l'aide du module python [csv](https://python-adv-web-apps.readthedocs.io/en/latest/csv.html) et constituer un dictionnaire python appelé `patients` utilisant:
+- `participant_id` comme clé principale
+- un deuxième dictionnaire comprenant le reste des informations en guise de valeur.
+
+## Partie 2: Fusion des données
+
+
+
+ 
