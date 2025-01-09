@@ -10,7 +10,7 @@
 
 L'objectif de ce travail pratique est d'apprendre à manipuler une base de données en utilisant Python. Ce TP vous permettra de découvrir et de maîtriser :  
 
-- Les structures de contrôle, telles que les structures conditionnelles ('if', 'else', etc.) et les structures de répétition ('for', 'while', etc.)  
+- Les structures de contrôle, telles que les structures conditionnelles (`if`, `else`, etc.) et les structures de répétition (`for`, `while`, etc.)  
 - Les différentes structures de données, comme les listes, les dictionnaires, et les tuples.
 - Le module python `csv` permettant d'ouvrir et d'enregister des fichiers csv.
 
