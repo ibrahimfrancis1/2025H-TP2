@@ -48,6 +48,16 @@ L'hôpital dans lequel vous travaillez décide de mettre à jour l'ensemble de s
 
 Afin de respecter ces nouvelles conventions, créer un nouveau dictionnaire appelé `new_convention` pour mettre à jour la gestion des dates du dictionnaire `patients` créé dans la partie 2.
 
+## Partie 4: Recherche de candidats pour une étude
+
+Dans le cadre d'une nouvelles étude, un groupe de chercheurs travaillant dans votre hôpital souhaite faire appel à vos services afin d'identifier des patients pour faire un nouveau scan IRM. Cependant, les candidats sélectionnés doivent satisfaire à quelques critères:
+Dans le cadre d'une nouvelle étude, un groupe de chercheurs de votre hôpital sollicite votre expertise pour identifier des patients pour un scan IRM. Cependant, ces candidats doivent répondre aux critères suivants :
+| Sexe | Âge | Taille |
+|:---:|:---:|:---:|
+|Feminin|25 ≤ âge ≤ 32| taille > 170|
+
+En suivant ces critères, créer une liste composée des `participant_id` de l'ensemble des candidats possibles.
+
 ## Références
 
 Les données utilisées dans les fichiers csv de ce TP sont extraites de la base de données [data-multi-subject](https://github.com/spine-generic/data-multi-subject).  
