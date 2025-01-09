@@ -2,6 +2,8 @@
 
 <img width="888" alt="tp_illustration" src="https://github.com/user-attachments/assets/672bddcb-34e0-41a7-a110-110a9dc62e57" />
 
+Crédits: [DALLE 3](https://openai.com/index/dall-e/)
+
 ## Directives
 
 ⏰ Date de remise : 
