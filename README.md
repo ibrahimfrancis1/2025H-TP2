@@ -40,6 +40,14 @@ Dans cette section, vous devrez charger les données contenues dans le fichier `
 
 Vous vous apercevez qu'un collègue à vous dispose également d'une liste de patients et vous souhaiteriez regrouper tous ces dernier au sein d'un unique dictionnaire python appelé `patients` comme précédemment. Dans cette partie, vous devrez regrouper l'ensemble des patients provenant des fichiers `subjects.csv` et `extra_subjects.csv` tout en **ÉVITANT LES DUPLICATIONS** en suivant la même construction que dans la partie 1.
 
+## Partie 3: Changements de convention
+
+L'hôpital dans lequel vous travaillez décide de mettre à jour l'ensemble de ses base de données pour suivre une nouvelle convention au niveau des dates. Cette nouvelle convention impose:
+- d'utiliser des slashs `/` à la place des tirets `-`
+- de remplacer les mentions `n/a` par l'objet python **None**
+
+Afin de respecter ces nouvelles conventions, créer un nouveau dictionnaire appelé `new_convention` pour mettre à jour la gestion des dates du dictionnaire `patients` créé dans la partie 2.
+
 ## Références
 
 Les données utilisées dans les fichiers csv de ce TP sont extraites de la base de données [data-multi-subject](https://github.com/spine-generic/data-multi-subject).  
