@@ -72,6 +72,15 @@ print(metrics['M']['height']['mean'])
 print(metrics['F']['age']['std'])
 ```
 
+## Partie 6: Bonus
+
+À partir du dictionnaire obtenu dans la partie 5, créer à l'aide de python deux `csv` appelés respectivement `F_metrics.csv` et `M_metrics.csv` pour chaques sexes. Ces csv devront être construits de la manière suivante:
+```csv
+stats,age,height,weight
+mean,0.0,0.0,0.0
+std,0.0,0.0,0.0
+```
+
 ## Références
 
 Les données utilisées dans les fichiers csv de ce TP sont extraites de la base de données [data-multi-subject](https://github.com/spine-generic/data-multi-subject).  
