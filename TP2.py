@@ -14,7 +14,7 @@ import csv
 
 def load_csv(csv_path):
     """
-    Fonction python dont l'objectif est de venir créer un dictionnaire "patients" à partir d'un fichier csv
+    Fonction python dont l'objectif est de venir créer un dictionnaire "patients_dict" à partir d'un fichier csv
 
     Paramètres
     ----------
@@ -182,3 +182,80 @@ def create_csv(metrics):
     # Fin du code
 
     return paths_list
+
+########################################################################################################## 
+# TESTS : Le code qui suit permet de tester les différentes parties 
+########################################################################################################## 
+
+if __name__ == '__main__':
+    ######################
+    # Tester la partie 1 #
+    ######################
+
+    # Initialisation de l'argument
+    csv_path = "subjects.csv"
+
+    # Utilisation de la fonction
+    patients_dict = load_csv(csv_path)
+
+    # Affichage du résultat
+    print("Partie 1: \n\n", patients_dict, "\n")
+
+    ######################
+    # Tester la partie 2 #
+    ######################
+
+    # Initialisation des arguments
+    csv_path1 = "subjects.csv"
+    csv_path2 = "extra_subjects.csv"
+
+    # Utilisation de la fonction
+    patients_dict_multi = load_multiple_csv(csv_path1=csv_path1, csv_path2=csv_path2)
+
+    # Affichage du résultat
+    print("Partie 2: \n\n", patients_dict_multi, "\n")
+
+    ######################
+    # Tester la partie 3 #
+    ######################
+
+    # Utilisation de la fonction
+    new_patients_dict = update_convention(patients_dict)
+
+    # Affichage du résultat
+    print("Partie 3: \n\n", patients_dict, "\n")
+
+    ######################
+    # Tester la partie 4 #
+    ######################
+
+    # Utilisation de la fonction
+    patients_list = fetch_candidates(patients_dict)
+
+    # Affichage du résultat
+    print("Partie 4: \n\n", patients_list, "\n")
+
+    ######################
+    # Tester la partie 5 #
+    ######################
+
+    # Utilisation de la fonction
+    metrics = fetch_statistics(patients_dict)
+
+    # Affichage du résultat
+    print("Partie 5: \n\n", metrics, "\n")
+
+    ######################
+    # Tester la partie 6 #
+    ######################
+
+    # Initialisation des arguments
+    dummy_metrics = {'M':{'age':{'mean':0,'std':0}, 'height':{'mean':0,'std':0}, 'weight':{'mean':0,'std':0}}, 
+                     'F':{'age':{'mean':0,'std':0}, 'height':{'mean':0,'std':0}, 'weight':{'mean':0,'std':0}}}
+    
+    # Utilisation de la fonction
+    paths_list = create_csv(metrics)
+
+    # Affichage du résultat
+    print("Partie 6: \n\n", paths_list, "\n")
+
