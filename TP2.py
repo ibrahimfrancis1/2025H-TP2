@@ -6,71 +6,179 @@ Numéro d'équipe :  YY
 Noms et matricules : Nom1 (Matricule1), Nom2 (Matricule2)
 """
 
-########################################################################################################## 
-# PARTIE 1 : 
-########################################################################################################## 
-
-# TODO : Écrire votre code ici
-
-
-
-
-
+import csv
 
 ########################################################################################################## 
-# PARTIE 2 : 
-########################################################################################################## 
+# PARTIE 1 : Initialisation des données (2 points)
+##########################################################################################################
 
-# TODO : Écrire votre code ici
+def load_csv(csv_path):
+    """
+    Fonction python dont l'objectif est de venir créer un dictionnaire "patients" à partir d'un fichier csv
 
+    Paramètres
+    ----------
+    csv_path : chaîne de caractères (str)
+        Chemin vers le fichier csv (exemple: "/home/data/fichier.csv")
+    
+    Résultats
+    ---------
+    patients_dict : dictionnaire python (dict)
+        Dictionnaire composé des informations contenues dans le fichier csv
+    """
+    patients_dict = {}
 
-
-
-
-
-########################################################################################################## 
-# PARTIE 3 : 
-########################################################################################################## 
-
-# TODO : Écrire votre code ici
-
-
-
-
-
-
-
-########################################################################################################## 
-# PARTIE 4 : 
-########################################################################################################## 
-
-# TODO : Écrire votre code ici
+    # TODO : Écrire votre code ici
 
 
+    # Fin du code
 
-
-
-
+    return patients_dict
 
 ########################################################################################################## 
-# PARTIE 5 : 
+# PARTIE 2 : Fusion des données (3 points)
 ########################################################################################################## 
 
-# TODO : Écrire votre code ici
+def load_multiple_csv(csv_path1, csv_path2):
+    """
+    Fonction python dont l'objectif est de venir créer un unique dictionnaire "patients" à partir de deux fichier csv
+
+    Paramètres
+    ----------
+    csv_path1 : chaîne de caractères (str)
+        Chemin vers le premier fichier csv (exemple: "/home/data/fichier1.csv")
+    
+    csv_path2 : chaîne de caractères (str)
+        Chemin vers le second fichier csv (exemple: "/home/data/fichier2.csv")
+    
+    Résultats
+    ---------
+    patients_dict : dictionnaire python (dict)
+        Dictionnaire composé des informations contenues dans les deux fichier csv SANS DUPLICATIONS
+    """
+    patients_dict = {}
+
+    # TODO : Écrire votre code ici
 
 
+    # Fin du code
 
-
-
-
+    return patients_dict
 
 ########################################################################################################## 
-# PARTIE 6 : 
+# PARTIE 3 : Changements de convention (4 points)
 ########################################################################################################## 
 
-# TODO : Écrire votre code ici
+def update_convention(old_convention_dict):
+    """
+    Fonction python dont l'objectif est de mettre à jour la convention d'un dictionnaire. Pour ce faire, un nouveau dictionnaire
+    est généré à partir d'un dictionnaire d'entré.
+
+    Paramètres
+    ----------
+    old_convention_dict : dictionnaire python (dict)
+        Dictionnaire contenant les informations des "patients" suivant l'ancienne convention
+    
+    Résultats
+    ---------
+    new_convention_dict : dictionnaire python (dict)
+        Dictionnaire contenant les informations des "patients" suivant la nouvelle convention
+    """
+    new_convention_dict = {}
+
+    # TODO : Écrire votre code ici
 
 
+    # Fin du code
+
+    return new_convention_dict
+
+########################################################################################################## 
+# PARTIE 4 : Recherche de candidats pour une étude (5 points)
+########################################################################################################## 
+
+def fetch_candidates(patients_dict):
+    """
+    Fonction python dont l'objectif est de venir sélectionner des candidats à partir d'un dictionnaire patients et 3 critères:
+    - sexe = femme
+    - 25 <= âge <= 32
+    - taille > 170
+
+    Paramètres
+    ----------
+    patients_dict : dictionnaire python (dict)
+        Dictionnaire contenant les informations des "patients"
+    
+    Résultats
+    ---------
+    candidates_list : liste python (list)
+        Liste composée des `participant_id` de l'ensemble des candidats suivant les critères
+    """
+    candidates_list = []
+
+    # TODO : Écrire votre code ici
 
 
+    # Fin du code
 
+    return candidates_list
+
+########################################################################################################## 
+# PARTIE 5 : Statistiques (6 points)
+########################################################################################################## 
+
+def fetch_statistics(patients_dict):
+    """
+    Fonction python dont l'objectif est de venir calculer et ranger dans un nouveau dictionnaire "metrics" la moyenne et 
+    l'écart type de l'âge, de la taille et de la masse pour chacun des sexes présents dans le dictionnaire "patients_dict".
+
+    Paramètres
+    ----------
+    patients_dict : dictionnaire python (dict)
+        Dictionnaire contenant les informations des "patients"
+    
+    Résultats
+    ---------
+    metrics : dictionnaire python (dict)
+        Dictionnaire à 3 niveaux contenant:
+            - au premier niveau: le sexe --> metrics.keys() == ['M', 'F']
+            - au deuxième niveau: les métriques --> metrics['M'].keys() == ['age', 'height', 'weight'] et metrics['F'].keys() == ['age', 'height', 'weight']
+            - au troisième niveau: la moyenne et l'écart type --> metrics['M']['age'].keys() == ['mean', 'std'] ...
+    
+    """
+    metrics = {'M':{}, 'F':{}}
+
+    # TODO : Écrire votre code ici
+
+
+    # Fin du code
+
+    return metrics
+
+########################################################################################################## 
+# PARTIE 6 : Bonus (+2 points)
+########################################################################################################## 
+
+def create_csv(metrics):
+    """
+    Fonction python dont l'objectif est d'enregister le dictionnaire "metrics" au sein de deux fichier csv appelés
+    "F_metrics.csv" et "M_metrics.csv" respectivement pour les deux sexes.
+
+    Paramètres
+    ----------
+    metrics : dictionnaire python (dict)
+        Dictionnaire à 3 niveaux généré lors de la partie 5
+    
+    Résultats
+    ---------
+    paths_list : liste python (list)
+        Liste contenant les chemins des deux fichiers "F_metrics.csv" et "M_metrics.csv"
+    """
+    paths_list = []
+
+    # TODO : Écrire votre code ici
+
+
+    # Fin du code
+
+    return paths_list
