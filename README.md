@@ -18,7 +18,7 @@ L'objectif de ce travail pratique est d'apprendre à manipuler une base de donn�
 - Les différentes structures de données, comme les listes, les dictionnaires, et les tuples.
 - Le module python `csv` permettant d'ouvrir et d'enregister des fichiers csv.
 
-Ces notions seront explorées à travers différentes parties présentant chacunes différentes utilisations pratiques de ces outils. Dans chacune des parties, vous devrez compléter
+Ces notions seront explorées à travers différentes parties présentant chacunes différentes utilisations pratiques de ces outils.
 
 ## Introduction
 
