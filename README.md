@@ -6,9 +6,9 @@ Crédits: [DALLE 3](https://openai.com/index/dall-e/)
 
 ## Directives
 
-⏰ Date de remise : 
+⏰ Date de remise : Dimanche 16 février 2025 avant 23h59
 
-📬 À remettre sur Moodle
+📬 À remettre sur Moodle: créer un fichier .zip nommé LXX-YY-TP2.zip où XX est le numéro de votre section de laboratoire et YY le numéro de votre équipe.
 
 ## Objectifs
 
