@@ -42,7 +42,7 @@ Dans cette section, vous devrez charger les données contenues dans le fichier `
 
 Exemple:
 ```
-> print(patients['sub-tokyoIngenia04'])
+> print(patients_dict['sub-tokyoIngenia04'])
 {'sex': 'F', 'age': '34', 'height': '161', 'weight': '65', 'date_of_scan': '2019-10-01', 'pathology': 'MildCompression'}
 ```
 
