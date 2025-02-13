@@ -3,7 +3,7 @@ TP2 : Gestion d'une base de données d'un hôpital
 
 Groupe de laboratoire : XX
 Numéro d'équipe :  YY
-Noms et matricules : Nom1 (Matricule1), Nom2 (Matricule2)
+Noms et matricules : Ibrahim Francis Coulibaly (2350383), Nom2 (Matricule2)
 """
 
 import csv
@@ -26,10 +26,24 @@ def load_csv(csv_path):
     patients_dict : dictionnaire python (dict)
         Dictionnaire composé des informations contenues dans le fichier csv
     """
-    patients_dict = {}
 
+    patients_dict = {}
+        
     # TODO : Écrire votre code ici
 
+    with open(csv_path, 'r') as fichier_csv:
+        lecteur_csv = csv.DictReader(fichier_csv)
+    
+        for ligne in lecteur_csv:
+            id = ligne['participant_id']
+            patients_dict[id] = {
+                'sex': ligne['sex'],
+                'age': ligne['age'],
+                'height': ligne['height'],
+                'weight': ligne['weight'],
+                'date_of_scan': ligne['date_of_scan'],
+                'pathology': ligne['pathology']
+            }
 
     # Fin du code
 
@@ -57,8 +71,46 @@ def load_multiple_csv(csv_path1, csv_path2):
         Dictionnaire composé des informations contenues dans les deux fichier csv SANS DUPLICATIONS
     """
     patients_dict = {}
+    doublon = False
 
     # TODO : Écrire votre code ici
+
+    with open(csv_path1, 'r') as fichier_csv1:
+        lecteur_csv = csv.DictReader(fichier_csv1)
+    
+        for ligne in lecteur_csv:
+            id = ligne['participant_id']
+            patients_dict[id] = {
+                'sex': ligne['sex'],
+                'age': ligne['age'],
+                'height': ligne['height'],
+                'weight': ligne['weight'],
+                'date_of_scan': ligne['date_of_scan'],
+                'pathology': ligne['pathology']
+            }
+
+
+    with open(csv_path2, 'r') as fichier_csv2:
+        lecteur_csv2 = csv.DictReader(fichier_csv2)
+    
+        for ligne in lecteur_csv2:
+            id = ligne['participant_id']
+            
+            for identifiant in patients_dict:
+                
+                if identifiant == id:
+                    doublon == True
+                    break
+            
+            if doublon == False:
+                patients_dict[id] = {
+                    'sex': ligne['sex'],
+                    'age': ligne['age'],
+                    'height': ligne['height'],
+                    'weight': ligne['weight'],
+                    'date_of_scan': ligne['date_of_scan'],
+                    'pathology': ligne['pathology']
+                }
 
 
     # Fin du code
