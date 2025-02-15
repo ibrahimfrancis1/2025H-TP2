@@ -128,18 +128,28 @@ def update_convention(old_convention_dict):
 
     Paramètres
     ----------
-    old_convention_dict : dictionnaire python (dict)
-        Dictionnaire contenant les informations des "patients" suivant l'ancienne convention
+     old_convention_dict : dictionnaire python (dict)
+         Dictionnaire contenant les informations des "patients" suivant l'ancienne convention
     
     Résultats
-    ---------
+      ---------
     new_convention_dict : dictionnaire python (dict)
         Dictionnaire contenant les informations des "patients" suivant la nouvelle convention
     """
     new_convention_dict = {}
 
     # TODO : Écrire votre code ici
-
+    for id, donnees in old_convention_dict.items():
+        for cle, valeur in donnees.items():
+            if cle == "date_of_scan" and valeur == "n/a":
+                donnees[cle] = None
+                new_convention_dict[id] = donnees
+                break
+            elif cle == "date_of_scan" and '-' in valeur:
+                #new_date = valeur.replace("-", "/")
+                donnees[cle] = valeur.replace("-", "/")
+                new_convention_dict[id] = donnees
+                break
 
     # Fin du code
 
