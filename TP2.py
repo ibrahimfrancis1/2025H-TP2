@@ -1,9 +1,9 @@
 """
 TP2 : Gestion d'une base de données d'un hôpital
 
-Groupe de laboratoire : XX
-Numéro d'équipe :  YY
-Noms et matricules : Ibrahim Francis Coulibaly (2350383), Nom2 (Matricule2)
+Groupe de laboratoire : 02
+Numéro d'équipe :  06
+Noms et matricules : Ibrahim Francis Coulibaly (2350383), Yassine Bouchbika (2338694)
 """
 
 import csv
@@ -180,6 +180,13 @@ def fetch_candidates(patients_dict):
 
     # TODO : Écrire votre code ici
 
+    
+    for i in patients_dict:
+        if (patients_dict[i].get("sex") == 'F'):
+            if (int(patients_dict[i].get("age"))) >= 25 and (int(patients_dict[i].get("age"))) <= 32:
+                if (int(patients_dict[i].get("height")) > 170):     
+                    candidates_list.append(i)    
+    
 
     # Fin du code
 
