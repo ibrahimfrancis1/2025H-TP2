@@ -5,7 +5,7 @@ Groupe de laboratoire : 02
 Numéro d'équipe :  06
 Noms et matricules : Ibrahim Francis Coulibaly (2350383), Yassine Bouchbika (2338694)
 """
-
+import math
 import csv
 
 ########################################################################################################## 
@@ -218,6 +218,119 @@ def fetch_statistics(patients_dict):
     metrics = {'M':{}, 'F':{}}
 
     # TODO : Écrire votre code ici
+    metrics.update({'M' : {'age' : {'mean' : {}, 'std' : {}}, 'height' : {'mean' : {}, 'std': {}}, 'weight' : {'mean' : {}, 'std' : {}}}})
+    metrics.update({'F' : {'age' : {'mean' : {}, 'std' : {}}, 'height' : {'mean' : {}, 'std': {}}, 'weight' : {'mean' : {}, 'std' : {}}}})
+
+    #Calcul des moyennes 'M'
+    counter1 = 0
+    counter2 = 0
+    sum_M1 = 0
+    sum_M2 = 0
+    sum_M3 = 0
+    for i in patients_dict:
+
+        if patients_dict[i].get('sex') == 'M':
+            sum_M1 += int(patients_dict[i].get('age'))
+       
+            sum_M3 += float(patients_dict[i].get('weight'))
+            counter1+=1
+
+            if patients_dict[i].get('height')!= 'n/a':
+                sum_M2 += int(patients_dict[i].get('height'))
+                counter2+=1
+
+    metrics['M']['age']['mean'] = sum_M1//counter1
+    metrics['M']['height']['mean'] = sum_M2//counter2
+    metrics['M']['weight']['mean'] = int(sum_M3//counter1)
+
+    #Calcul des moyennes 'F'
+    counter3 = 0
+    sum_F1 = 0
+    sum_F2 = 0
+    sum_F3 = 0
+    for i in patients_dict:
+
+        if patients_dict[i].get('sex') == 'F':
+            sum_F1 += int(patients_dict[i].get('age'))
+            sum_F2 += int(patients_dict[i].get('height'))
+            sum_F3 += int(patients_dict[i].get('weight'))
+            counter3+=1
+
+    metrics['F']['age']['mean'] = sum_F1//counter3
+    metrics['F']['height']['mean'] = sum_F2//counter3
+    metrics['F']['weight']['mean'] = sum_F3//counter3
+
+
+    #Écars-types chez 'M'
+    MAge = metrics['M']['age']['mean']
+    MHeight = metrics['M']['height']['mean']
+    MWeight = metrics['M']['weight']['mean']
+
+    pre1 = 0
+    pre2 = 0
+    pre3 = 0
+    counter4 = 0
+    counter5 = 0
+
+    for i in patients_dict:
+        if patients_dict[i].get('sex') == 'M':
+            pre1 += (MAge-int(patients_dict[i].get('age')))**2
+            pre3 += (MWeight-float(patients_dict[i].get('weight')))**2
+            counter4 += 1
+
+            if patients_dict[i].get('height') != 'n/a':
+                pre2 += (MHeight-int(patients_dict[i].get('height')))**2
+                counter5 += 1
+
+    
+    metrics['M']['age']['std'] = int((pre1/counter4)**(1/2))
+    metrics['M']['height']['std'] = int((pre2/counter5)**(1/2))
+    metrics['M']['weight']['std'] = int((pre3/counter4)**(1/2))
+
+        #Écars-types chez 'F'
+    FAge = metrics['F']['age']['mean']
+    FHeight = metrics['F']['height']['mean']
+    FWeight = metrics['F']['weight']['mean']
+
+    pre4 = 0
+    pre5 = 0
+    pre6 = 0
+    counter6 = 0
+
+    for i in patients_dict:
+        if patients_dict[i].get('sex') == 'F':
+            pre4 += (FAge-int(patients_dict[i].get('age')))**2
+            pre5 += (FHeight-int(patients_dict[i].get('height')))**2
+            pre6 += (FWeight-float(patients_dict[i].get('weight')))**2
+            counter6 += 1
+
+    
+    metrics['F']['age']['std'] = int((pre4/counter6)**(1/2))
+    metrics['F']['height']['std'] = int((pre5/counter6)**(1/2))
+    metrics['F']['weight']['std'] = int((pre6/counter6)**(1/2))
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+            
+
+
+
+
+
+
+
+
 
 
     # Fin du code
