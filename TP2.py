@@ -310,29 +310,6 @@ def fetch_statistics(patients_dict):
     metrics['F']['weight']['std'] = int((pre6/counter6)**(1/2))
 
 
-
-
-
-
-
-
-
-
-
-    
-
-
-            
-
-
-
-
-
-
-
-
-
-
     # Fin du code
 
     return metrics
