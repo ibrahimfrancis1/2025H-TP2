@@ -287,7 +287,7 @@ def fetch_statistics(patients_dict):
     metrics['M']['height']['std'] = int((pre2/counter5)**(1/2))
     metrics['M']['weight']['std'] = int((pre3/counter4)**(1/2))
 
-        #Écars-types chez 'F'
+    #Écars-types chez 'F'
     FAge = metrics['F']['age']['mean']
     FHeight = metrics['F']['height']['mean']
     FWeight = metrics['F']['weight']['mean']
